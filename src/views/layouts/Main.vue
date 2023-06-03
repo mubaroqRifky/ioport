@@ -17,6 +17,6 @@ import HeaderNav from "../layouts/HeaderNav.vue";
 }
 
 .max-container {
-    @apply max-w-[1100px] mx-auto;
+    @apply max-w-[90%] md:max-w-[85%] lg:max-w-[900px] xl:max-w-[1100px] mx-auto;
 }
 </style>
