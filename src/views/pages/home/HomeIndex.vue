@@ -290,7 +290,7 @@ const language = [
     },
     {
         id: 6,
-        title: "Bootsrap",
+        title: "Bootstrap",
         experience: "2+ Year",
         rate: 5,
         image: "",
