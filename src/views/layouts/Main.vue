@@ -9,6 +9,15 @@
 <script setup>
 import Footer from "./Footer.vue";
 import HeaderNav from "../layouts/HeaderNav.vue";
+
+import { StatusBar, Style } from "@capacitor/status-bar";
+import { isPlatform } from "@ionic/vue";
+
+if (isPlatform("mobile") && !isPlatform("mobileweb")) {
+    StatusBar.setOverlaysWebView({ overlay: false });
+    StatusBar.setStyle({ style: Style.Light });
+    StatusBar.setBackgroundColor({ color: "#e3e3e3" });
+}
 </script>
 
 <style lang="scss">

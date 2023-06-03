@@ -4,7 +4,22 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { App as CapacitorApp } from "@capacitor/app";
+import { Dialog } from "@capacitor/dialog";
+
+CapacitorApp.addListener("backButton", ({ canGoBack }) => {
+    if (!canGoBack) {
+        alert(Dialog);
+        Dialog.confirm({
+            title: "Confirm",
+            message: `Are you sure to exit the App?`,
+        }).then(({ value }) => {
+            if (value) CapacitorApp.exitApp();
+        });
+    }
+});
+</script>
 
 <style scoped>
 .app-container {

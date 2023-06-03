@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MyProfile</string>
+    <string name="title_activity_main">MyProfile</string>
+    <string name="package_name">com.itdev.ioport</string>
+    <string name="custom_url_scheme">com.itdev.ioport</string>
+</resources>
