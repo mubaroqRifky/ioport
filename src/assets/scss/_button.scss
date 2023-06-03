@@ -1,0 +1,105 @@
+button {
+    @apply focus:outline-none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn {
+    @apply rounded-lg text-base text-white flex gap-2 items-center justify-center px-10 py-3 whitespace-nowrap;
+    position: relative;
+    overflow: hidden;
+    transition: background 100ms;
+
+    &:disabled {
+        @apply bg-darkGray hover:bg-darkGray;
+    }
+}
+
+.btn.btn-sm {
+    @apply px-4 py-1 text-xs;
+}
+
+.btn.btn-md {
+    @apply px-4 py-2.5 text-sm;
+}
+
+.btn-primary {
+    @apply bg-success hover:bg-[#1ba7f3];
+
+    &:disabled {
+        @apply bg-[#add8e6] hover:bg-[#add8e6];
+    }
+
+    &:active {
+        @apply bg-[#25b3ff];
+    }
+
+    &:focus {
+        @apply outline-2 outline-offset-1 outline-blue-light;
+    }
+}
+
+.btn-secondary {
+    @apply bg-primary hover:bg-[#f74e4e];
+
+    &:disabled {
+        @apply bg-[#ee8c8c] hover:bg-[#ee8c8c];
+    }
+
+    &:active {
+        @apply bg-[#ff2a2a];
+    }
+
+    &:focus {
+        @apply outline-2 outline-offset-1 outline-red-light;
+    }
+}
+
+.btn-tertiary {
+    @apply bg-gray-dark hover:bg-[#000000];
+
+    &:disabled {
+        @apply bg-darkGray hover:bg-darkGray;
+    }
+
+    &:focus {
+        @apply outline-2 outline-offset-1 outline-darkGray;
+    }
+}
+
+.btn-danger {
+    @apply bg-danger hover:bg-[#f53b3b];
+
+    &:disabled {
+        @apply bg-darkGray hover:bg-darkGray;
+    }
+
+    &:focus {
+        @apply outline-2 outline-offset-1 outline-darkGray;
+    }
+}
+
+.btn-file {
+    @apply bg-lightGray hover:bg-softGray text-gray-dark text-xs;
+
+    &:disabled {
+        @apply bg-darkGray hover:bg-darkGray;
+    }
+
+    &:focus {
+        @apply outline-2 outline-offset-1 outline-darkGray;
+    }
+}
+
+.text-link {
+    @apply text-success hover:text-primary transition-all flex items-center gap-2 text-sm;
+}
+
+.card-button-container {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+
+    @media only screen and (max-width: 426px) {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
