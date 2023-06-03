@@ -1,9 +1,13 @@
 <template>
-    <ion-app>
-        <ion-router-outlet />
-    </ion-app>
+    <div class="app-container">
+        <RouterView> </RouterView>
+    </div>
 </template>
 
-<script setup>
-import { IonApp, IonRouterOutlet } from "@ionic/vue";
-</script>
+<script setup></script>
+
+<style scoped>
+.app-container {
+    @apply max-w-[2500px] mx-auto;
+}
+</style>
