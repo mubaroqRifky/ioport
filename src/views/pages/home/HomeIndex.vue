@@ -393,7 +393,7 @@ const experience = [
         from: "Juli 2022",
         to: "Now",
         link: "https://www.cpp.co.id/",
-        desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.",
+        desc: "The best moment that I can't forget is being given the opportunity to learn and grow in this company. Like their slogan 'Growing Stronger Together'. I got a lot of knowledge here because I was entrusted with something that I had never handled before, I think because I know the concept so than I get trusted. And also I learned a lot about something that wasn't in my job description. Here I know how important standardization is and I realize how important code management is for development.",
     },
     {
         id: 2,
@@ -402,7 +402,7 @@ const experience = [
         from: "Juni 2021",
         to: "Mei 2022",
         link: "https://artanata.com/",
-        desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.",
+        desc: "This is my first work experience after learning programming for a long time. I learned a lot from this startup company. One is that project deadlines and multiple projects simultaneously allow me to learn how to be responsible and make the best use of time to achieve goals. Until finally I got used to quality, accuracy and efficiency.",
     },
 ];
 
