@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-gray h-[28rem] md:h-5xl flex flex-col">
+    <section class="bg-lightGray h-[28rem] md:h-5xl flex flex-col">
         <div
             class="max-container grid md:grid-cols-2 gap-8 flex-1 items-center"
         >
@@ -34,21 +34,32 @@
         class="max-container flex flex-wrap justify-center gap-6 md:gap-12 py-16 md:py-24"
     >
         <div
-            class="bg-gray p-4 md:p-12 grid gap-4 text-center w-32 md:w-72"
+            class="bg-lightGray p-4 md:p-6 grid gap-2 text-center justify-center justify-items-center w-32 md:w-72"
             v-for="(item, index) in slogans"
             :key="index"
         >
-            <div>
-                <h5 class="font-bold md:text-4xl">
+            <div class="w-14 h-14 md:w-36 md:h-36">
+                <img
+                    class="w-full h-full object-contain"
+                    v-if="item.image"
+                    :src="item.image"
+                    :alt="item.title"
+                />
+                <h5 v-else class="font-bold md:text-4xl">
                     LOGO <br />IS<br />
                     HERE
                 </h5>
             </div>
-            <p class="text-xs md:text-base uppercase">{{ item.title }}</p>
+            <p class="text-xs md:text-base uppercase tracking-widest">
+                {{ item.title }}
+            </p>
         </div>
     </section>
 
-    <section class="bg-gray mt-0.5 py-10 md:py-20 flex flex-col" id="projects">
+    <section
+        class="bg-lightGray mt-0.5 py-10 md:py-20 flex flex-col"
+        id="projects"
+    >
         <h3
             class="text-base md:text-4xl text-center mb-10 md:mb-20"
             style="letter-spacing: 5px"
@@ -121,7 +132,7 @@
 
         <section class="flex flex-col gap-8">
             <div
-                class="bg-gray px-4 py-3 md:px-8 md:py-6 grid md:flex gap-4 md:gap-8"
+                class="bg-lightGray px-4 py-3 md:px-8 md:py-6 grid md:flex gap-4 md:gap-8"
                 v-for="(item, index) in experience"
                 :key="index"
             >
@@ -166,22 +177,28 @@
     </section>
 
     <section
-        class="flex gap-4 overflow-x-auto px-4 md:ml-14 lg:ml-20 md:pr-14 lg:pr-20 mb-10 md:mb-20 scroll-hidden"
+        class="flex gap-3 md:gap-6 overflow-x-auto px-4 md:ml-14 lg:ml-20 md:pr-14 lg:pr-20 mb-10 md:mb-20 scroll-hidden"
     >
         <div
-            class="bg-gray px-4 md:px-8 py-4 md:py-6 flex gap-3 md:gap-6 min-w-[11.5rem] md:min-w-fit"
-            v-for="(item, index) in language"
+            class="bg-lightGray px-2 md:px-5 py-2 md:py-4 flex gap-2 md:gap-4 min-w-[11.5rem] md:min-w-fit rounded-sm"
+            v-for="(item, index) in frameworks"
             :key="index"
         >
-            <div>
-                <h5 class="font-bold md:text-3xl text-center">
+            <div class="w-16 h-16 md:w-24 md:h-24 bg-white p-2 rounded-sm">
+                <img
+                    class="w-full h-full object-contain"
+                    v-if="item.image"
+                    :src="item.image"
+                    :alt="item.title"
+                />
+                <h5 v-else class="font-bold md:text-3xl text-center">
                     LOGO <br />IS<br />
                     HERE
                 </h5>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-1 md:gap-2">
                 <p class="text-sm md:text-lg">{{ item.title }}</p>
-                <div class="flex-1 flex flex-col gap-2">
+                <div class="flex-1 flex flex-col md:gap-2">
                     <article class="text-xs md:text-sm leading-3 md:leading-4">
                         <p>{{ item.experience }}</p>
                         <p>Experience</p>
@@ -199,17 +216,23 @@
         </div>
     </section>
 
-    <section class="bg-gray py-10 md:py-20 mb-10 md:mb-20">
+    <section class="bg-lightGray py-10 md:py-20 mb-10 md:mb-20">
         <div
             class="max-container flex flex-wrap gap-4 md:gap-12 justify-center"
         >
             <div
                 class="bg-white p-6 md:p-12 w-[45%] md:w-72 flex flex-col justify-center items-center text-center"
-                v-for="(item, index) in frameworks"
+                v-for="(item, index) in languages"
                 :key="index"
             >
-                <div>
-                    <h5 class="font-bold md:text-xl">
+                <div class="w-14 h-14 md:w-24 md:h-24">
+                    <img
+                        class="w-full h-full object-contain"
+                        v-if="item.image"
+                        :src="item.image"
+                        :alt="item.title"
+                    />
+                    <h5 v-else class="font-bold md:text-xl">
                         LOGO <br />IS<br />
                         HERE
                     </h5>
@@ -234,112 +257,131 @@ import IconLink from "@/components/icons/IconLink.vue";
 import IconWebsite from "@/components/icons/IconWebsite.vue";
 import IconMobile from "@/components/icons/IconMobile.vue";
 
+import imgPassion from "@/assets/images/passionate.png";
+import imgOccupation from "@/assets/images/occupation.png";
+import imgInovation from "@/assets/images/inovation.png";
+
+import imgJavascript from "@/assets/images/javascript.png";
+import imgPHP from "@/assets/images/php.png";
+import imgNodeJs from "@/assets/images/nodejs.png";
+import imgHtml from "@/assets/images/html.png";
+import imgCss from "@/assets/images/css.png";
+
+import imgVuejs from "@/assets/images/vuejs.png";
+import imgReact from "@/assets/images/react.png";
+import imgLaravel from "@/assets/images/laravel.png";
+import imgSass from "@/assets/images/sass.png";
+import imgTailwind from "@/assets/images/tailwind.png";
+import imgBootstrap from "@/assets/images/bootstrap.png";
+import imgIonic from "@/assets/images/ionic.png";
+import imgReactNative from "@/assets/images/react-native.png";
+
 const slogans = [
     {
         id: 1,
         title: "Passion",
-        image: "",
+        image: imgPassion,
     },
     {
         id: 2,
         title: "Occupation",
-        image: "",
+        image: imgOccupation,
     },
     {
         id: 3,
         title: "Inovation",
-        image: "",
+        image: imgInovation,
     },
 ];
 
-const language = [
+const frameworks = [
     {
         id: 1,
         title: "Vue.js",
         experience: "1+ Year",
         rate: 5,
-        image: "",
+        image: imgVuejs,
     },
     {
         id: 2,
         title: "React.js",
         experience: "2+ Year",
         rate: 4,
-        image: "",
+        image: imgReact,
     },
     {
         id: 3,
         title: "Laravel",
         experience: "2+ Year",
         rate: 4,
-        image: "",
+        image: imgLaravel,
     },
     {
         id: 4,
         title: "Sass",
         experience: "3+ Year",
         rate: 5,
-        image: "",
+        image: imgSass,
     },
     {
         id: 5,
         title: "Tailwindcss",
         experience: "2+ Year",
         rate: 5,
-        image: "",
+        image: imgTailwind,
     },
     {
         id: 6,
         title: "Bootstrap",
         experience: "2+ Year",
         rate: 5,
-        image: "",
+        image: imgBootstrap,
     },
     {
         id: 7,
         title: "Ionic",
         experience: "1+ Year",
         rate: 4,
-        image: "",
+        image: imgIonic,
     },
     {
         id: 8,
         title: "React Native",
         experience: "1+ Year",
         rate: 4,
-        image: "",
+        image: imgReactNative,
     },
 ];
-const frameworks = [
+const languages = [
     {
         id: 1,
         title: "Javascript",
         rate: 5,
-        image: "",
+        image: imgJavascript,
     },
     {
         id: 2,
         title: "PHP",
         rate: 4,
-        image: "",
+        image: imgPHP,
     },
     {
         id: 3,
         title: "Node.js",
         rate: 4,
-        image: "",
+        image: imgNodeJs,
     },
     {
         id: 4,
         title: "HTML5",
         rate: 5,
-        image: "",
+        image: imgHtml,
     },
     {
         id: 5,
         title: "CSS3",
         rate: 5,
-        image: "",
+        image: imgCss,
     },
 ];
 

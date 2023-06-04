@@ -1,5 +1,5 @@
 <template lang="">
-    <footer class="bg-gray" id="contact">
+    <footer class="bg-lightGray" id="contact">
         <section
             class="max-container flex flex-col lg:flex-row pt-10 md:pt-20 pb-5 md:pb-10 justify-between gap-10 text-xs md:text-sm"
         >
@@ -48,7 +48,7 @@
         </section>
 
         <section
-            class="text-xs text-center px-4 py-4 border-t border-lightGray border-solid"
+            class="text-xs text-center px-4 py-4 border-t border-gray border-solid"
         >
             copyright&copy;2023, Jakarta - Indonesia
         </section>

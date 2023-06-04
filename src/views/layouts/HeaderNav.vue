@@ -1,9 +1,17 @@
 <template>
-    <header class="px-2 py-2 bg-gray border-b border-solid border-lightGray">
+    <header
+        class="px-2 py-4 md:py-6 bg-lightGray border-b border-solid border-gray"
+    >
         <section class="flex items-center justify-between max-container">
             <div class="font-bold">
                 <h1 class="text-xl md:text-2xl flex items-center">
-                    <img :src="LogoImage" alt="My Profile Logo" />
+                    <div class="w-10 h-auto">
+                        <img
+                            class="w-full h-full object-contain"
+                            :src="LogoImage"
+                            alt="My Profile Logo"
+                        />
+                    </div>
                     MyProfile
                 </h1>
             </div>
